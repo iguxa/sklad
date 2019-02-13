@@ -18,14 +18,39 @@
         <div class="order w-50">НОВЫЙ ЗАКАЗ</div>
     </div>
     <div class="order_content ">
+        <div class="second">
+            <div class="connection d-flex justify-content-around pt-5 align-items-center">
+                <div class="refresh">
+                    <button type="button" class="btn btn-success">Обновить</button>
+                </div>
+                <div class="message">
+                    <div class="alert alert-success" role="alert">
+                        Прайс обновлен
+                    </div>
+                    <div class="alert alert-danger" role="alert">
+                        Какая то ошибка
+                    </div>
+                </div>
+                <!--<div class="next">
+                    <a class="btn btn-primary" href="#" role="button">Далее</a>
+                </div>-->
+            </div>
+        </div>
         <div class="first d-flex justify-content-between">
             <div class="  p-5 flex-grow-1">
 
-                <div class="form-group">
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Контрагент">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Контрагент" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text checked" id="basic-addon2">Ок</span>
+                    </div>
                 </div>
-                <div class="form-group pb-5">
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Поставщик">
+
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Поставщик" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <span class="input-group-text checked" id="basic-addon2">Ок</span>
+                    </div>
                 </div>
 
                 <div class="d-flex align-items-center justify-content-between flex-wrap">
@@ -46,6 +71,7 @@
                         <label for="exampleInputEmail1">Цена</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                     </div>
+                        <span class="input-group-text checked" id="basic-addon2">Ок</span>
                 </div>
 
 
@@ -67,6 +93,8 @@
                         <label for="exampleInputEmail1">Цена</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                     </div>
+                    <span class="input-group-text checked" id="basic-addon2">Ок</span>
+
                 </div>
 
 
@@ -88,6 +116,8 @@
                         <label for="exampleInputEmail1">Цена</label>
                         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
                     </div>
+                    <span class="input-group-text checked" id="basic-addon2">Ок</span>
+
                 </div>
                 <div class="total d-flex align-items-center flex-row-reverse  flex-wrap">
 
@@ -110,24 +140,18 @@
                 </div>
             </div>
         </div>
-        <div class="second">
+        <div class="third py-5">
             <div class="connection d-flex justify-content-around pt-5 align-items-center">
                 <div class="refresh">
-                    <button type="button" class="btn btn-success">Обновить</button>
+                    <button type="button" class="btn btn-secondary">Назад</button>
                 </div>
-                <div class="message">
-                    <div class="alert alert-success" role="alert">
-                        Прайс обновлен
-                    </div>
-                    <div class="alert alert-danger" role="alert">
-                        Какая то ошибка
-                    </div>
-                </div>
+
                 <div class="next">
-                    <a class="btn btn-primary" href="#" role="button">Далее</a>
+                    <a class="btn btn-success" href="#" role="button">Оформить</a>
                 </div>
             </div>
         </div>
+
     </div>
 
 </div>

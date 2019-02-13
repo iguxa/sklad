@@ -11,3 +11,7 @@
  .order_content{
     background-color: #EEEEEE;
  }
+ .checked{
+     background-color: #28A745;
+     color: white;
+ }
