@@ -1,0 +1,895 @@
+2019/02/18 18:12:04 [error] 15158#15158: *177 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:36:47 [error] 15158#15158: *331 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:36:47 [error] 15158#15158: *331 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, integer returned in /var/www/sklad/script.php on line 73
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, integer returned in /var/www/sklad/script.php:73
+Stack trace:
+#0 /var/www/sklad/script.php(148): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(171): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 73" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:36:47 [error] 15158#15158: *331 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:36:47 [error] 15158#15158: *331 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, integer returned in /var/www/sklad/script.php on line 73
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, integer returned in /var/www/sklad/script.php:73
+Stack trace:
+#0 /var/www/sklad/script.php(148): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(171): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 73" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:40:22 [error] 15158#15158: *362 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:47:48 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:47:48 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:47:48 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:47:48 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:12 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:12 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:13 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:13 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:16 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:16 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:16 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:16 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:24 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:24 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:24 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:24 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:54 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:54 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:54 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:54 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:55 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:55 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:55 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:48:55 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:49:04 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:49:04 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:49:04 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:49:04 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:49:04 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:49:04 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:49:04 [error] 15159#15159: *443 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:49:04 [error] 15159#15159: *443 FastCGI sent in stderr: " Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175
+PHP message: PHP Notice:  Undefined variable: result in /var/www/sklad/script.php on line 100
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:198
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:175" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:26 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:26 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:26 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:26 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:28 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:28 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:51:29 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:00 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:00 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:07 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:07 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:07 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:07 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:23 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:23 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:23 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:23 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:24 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:24 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:24 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:24 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:32 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:32 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:33 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:33 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:59 [error] 15158#15158: *472 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:52:59 [error] 15158#15158: *472 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 92
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:190
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:167
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:92
+Stack trace:
+#0 /var/www/sklad/script.php(167): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(190): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 92" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:54:25 [error] 15158#15158: *498 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:54:25 [error] 15158#15158: *498 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 97
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:195
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:172
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:97
+Stack trace:
+#0 /var/www/sklad/script.php(172): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(195): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 97" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:54:25 [error] 15158#15158: *498 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:54:25 [error] 15158#15158: *498 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 97
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:195
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:172
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:97
+Stack trace:
+#0 /var/www/sklad/script.php(172): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(195): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 97" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:54:26 [error] 15158#15158: *498 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:54:26 [error] 15158#15158: *498 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 97
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:195
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:172
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:97
+Stack trace:
+#0 /var/www/sklad/script.php(172): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(195): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 97" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:54:26 [error] 15158#15158: *498 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:54:26 [error] 15158#15158: *498 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 97
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:195
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:172
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:97
+Stack trace:
+#0 /var/www/sklad/script.php(172): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(195): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 97" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:55:00 [error] 15158#15158: *498 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:55:00 [error] 15158#15158: *498 FastCGI sent in stderr: " TypeError:  Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php on line 97
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:195
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:172
+PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, string returned in /var/www/sklad/script.php:97
+Stack trace:
+#0 /var/www/sklad/script.php(172): MoySklad->curl(Array, 'entity/counterp...', 'GET')
+#1 /var/www/sklad/script.php(195): MoySklad->getAgent('\xD0\xBF\xD0\xBE\xD0\xBA\xD1\x83\xD0\xBF\xD0\xB0')
+#2 /var/www/sklad/index.php(143): include_once('/var/www/sklad/...')
+#3 {main}
+  thrown in /var/www/sklad/script.php on line 97" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:56:34 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:56:34 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:56:35 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:56:35 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:05 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:05 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:05 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:05 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:12 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:12 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:12 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:12 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:15 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:15 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:15 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:15 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:16 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:16 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:16 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:16 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:24 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:24 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:24 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:24 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:25 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:25 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:25 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:25 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:35 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:35 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Ошибка аутентификации: Неправильный пароль или имя пользователя","code":1056,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1056"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:35 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:35 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Ошибка аутентификации: Неправильный пароль или имя пользователя","code":1056,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1056"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:39 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:39 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:40 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:57:40 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:17 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:17 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:18 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:18 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:21 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:21 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:22 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:22 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:30 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:32 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:32 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:32 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:37 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:37 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:37 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:58:37 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неизвестный тип: 'counterparty?search=покупа'","code":1005,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1005"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:59:10 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:59:10 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неопознанный путь: counterparty/?search=покупа","code":1002,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1002"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty/?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:59:10 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:59:10 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неопознанный путь: counterparty/?search=покупа","code":1002,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1002"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty/?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:59:34 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:59:34 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неопознанный путь: http://online.moysklad.ru/api/remap/1.1/https:/online.moysklad.ru/api/remap/1.1/entity/counterparty/%3Fsearch=%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%B0","code":1002,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1002"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'https://online.moysklad.ru/api/remap/1.1/entity/counterparty/?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:59:34 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 18:59:34 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Неопознанный путь: http://online.moysklad.ru/api/remap/1.1/https:/online.moysklad.ru/api/remap/1.1/entity/counterparty/%3Fsearch=%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%B0","code":1002,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1002"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'https://online.moysklad.ru/api/remap/1.1/entity/counterparty/?search=покупа', $method = 'GET') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:00:38 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:00:38 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Запрос не содержит объектов","code":1027,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1027"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty/?search=%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%B0', $method = 'POST') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:00:38 [error] 15158#15158: *506 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:00:38 [error] 15158#15158: *506 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Запрос не содержит объектов","code":1027,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-1027"}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:171
+PHP message: PHP   4. MoySklad->curl($params = array (), $provider = 'entity/counterparty/?search=%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%B0', $method = 'POST') /var/www/sklad/script.php:148" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:08:16 [error] 15158#15158: *562 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:08:16 [error] 15158#15158: *562 FastCGI sent in stderr: " Notice:  Undefined property: stdClass::$name in /var/www/sklad/script.php on line 150
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:174
+PHP message: PHP Notice:  Undefined property: stdClass::$name in /var/www/sklad/script.php on line 150
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:174
+PHP message: PHP Notice:  Trying to get property 'name' of non-object in /var/www/sklad/script.php on line 150
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:174" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:08:17 [error] 15158#15158: *562 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:08:17 [error] 15158#15158: *562 FastCGI sent in stderr: " Notice:  Undefined property: stdClass::$name in /var/www/sklad/script.php on line 150
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:174
+PHP message: PHP Notice:  Undefined property: stdClass::$name in /var/www/sklad/script.php on line 150
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:174
+PHP message: PHP Notice:  Trying to get property 'name' of non-object in /var/www/sklad/script.php on line 150
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:174" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:25:57 [error] 15158#15158: *618 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:25:57 [error] 15158#15158: *618 FastCGI sent in stderr: " Warning:  curl_exec(): supplied resource is not a valid cURL handle resource in /var/www/sklad/script.php on line 66
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:181
+PHP message: PHP   4. MoySklad->storeAgent($name = 'Иванов') /var/www/sklad/script.php:155
+PHP message: PHP   5. MoySklad->curl($params = array ('name' => 'Иванов'), $provider = 'entity/counterparty/', $method = 'POST') /var/www/sklad/script.php:159
+PHP message: PHP   6. curl_exec(resource(2) of type (Unknown)) /var/www/sklad/script.php:66" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:25:57 [error] 15158#15158: *618 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 19:25:57 [error] 15158#15158: *618 FastCGI sent in stderr: " Warning:  curl_exec(): supplied resource is not a valid cURL handle resource in /var/www/sklad/script.php on line 66
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:181
+PHP message: PHP   4. MoySklad->storeAgent($name = 'Иванов') /var/www/sklad/script.php:155
+PHP message: PHP   5. MoySklad->curl($params = array ('name' => 'Иванов'), $provider = 'entity/counterparty/', $method = 'POST') /var/www/sklad/script.php:159
+PHP message: PHP   6. curl_exec(resource(1) of type (Unknown)) /var/www/sklad/script.php:66" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:04:09 [error] 15158#15158: *634 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:04:09 [error] 15158#15158: *634 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Ошибка сохранения контрагента: неизвестный тип цены: 'Цена летняя'","code":28000,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-28000","line":1,"column":2}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:204
+PHP message: PHP   4. MoySklad->storeAgent($name = 'Иванов') /var/www/sklad/script.php:154
+PHP message: PHP   5. MoySklad->curl($params = array ('name' => 'ООО Радуга', 'description' => 'Сеть стройматериалов Радуга ЭКСПО', 'code' => 'rainbowCode', 'externalCode' => 'extRainbw', 'email' => 'raduga@stroi.ru', 'phone' => '+7 495 331 22 33', 'fax' => '1257752', 'actualAddress' => 'г.Москва ул Академика Миля дом 15 к 21', 'legalTitle' => 'Общество с ограниченой ответственностью "Радуга"', 'legalAddress' => 'г.Москва ул Авиастроителей д 93 к 12', 'inn' => '125152124152', 'kpp' => '12155521', 'ogrn' => '1251512', 'okpo' => '201355', 'tags' => array (0 => 'Строители', 1 => 'Радуга', 2 => 'Ремонт'), 'priceType' => 'Цена летняя'), $provider = 'entity/counterparty/', $method = 'POST') /var/www/sklad/script.php:182" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:04:09 [error] 15158#15158: *634 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:04:09 [error] 15158#15158: *634 FastCGI sent in stderr: " Exception:  {"errors":[{"error":"Ошибка сохранения контрагента: неизвестный тип цены: 'Цена летняя'","code":28000,"moreInfo":"https://online.moysklad.ru/api/remap/1.1/doc#обработка-ошибок-28000","line":1,"column":2}]} in /var/www/sklad/script.php on line 67
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143
+PHP message: PHP   3. MoySklad->getAgent($name = 'покупа') /var/www/sklad/script.php:204
+PHP message: PHP   4. MoySklad->storeAgent($name = 'Иванов') /var/www/sklad/script.php:154
+PHP message: PHP   5. MoySklad->curl($params = array ('name' => 'ООО Радуга', 'description' => 'Сеть стройматериалов Радуга ЭКСПО', 'code' => 'rainbowCode', 'externalCode' => 'extRainbw', 'email' => 'raduga@stroi.ru', 'phone' => '+7 495 331 22 33', 'fax' => '1257752', 'actualAddress' => 'г.Москва ул Академика Миля дом 15 к 21', 'legalTitle' => 'Общество с ограниченой ответственностью "Радуга"', 'legalAddress' => 'г.Москва ул Авиастроителей д 93 к 12', 'inn' => '125152124152', 'kpp' => '12155521', 'ogrn' => '1251512', 'okpo' => '201355', 'tags' => array (0 => 'Строители', 1 => 'Радуга', 2 => 'Ремонт'), 'priceType' => 'Цена летняя'), $provider = 'entity/counterparty/', $method = 'POST') /var/www/sklad/script.php:182" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:12:02 [error] 15158#15158: *651 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:12:02 [error] 15158#15158: *651 FastCGI sent in stderr: " Notice:  Trying to get property 'id' of non-object in /var/www/sklad/script.php on line 207
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:12:02 [error] 15158#15158: *651 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:12:02 [error] 15158#15158: *651 FastCGI sent in stderr: " Notice:  Trying to get property 'id' of non-object in /var/www/sklad/script.php on line 207
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:12:04 [error] 15158#15158: *651 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:12:04 [error] 15158#15158: *651 FastCGI sent in stderr: " Notice:  Trying to get property 'id' of non-object in /var/www/sklad/script.php on line 207
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:12:04 [error] 15158#15158: *651 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:12:04 [error] 15158#15158: *651 FastCGI sent in stderr: " Notice:  Trying to get property 'id' of non-object in /var/www/sklad/script.php on line 207
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:22:35 [error] 15158#15158: *675 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:22:35 [error] 15158#15158: *675 FastCGI sent in stderr: " Notice:  Trying to get property 'id' of non-object in /var/www/sklad/script.php on line 220
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:22:35 [error] 15158#15158: *675 FastCGI sent in stderr: "PHP message: PHP" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:22:35 [error] 15158#15158: *675 FastCGI sent in stderr: " Notice:  Trying to get property 'id' of non-object in /var/www/sklad/script.php on line 220
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:143" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:34:22 [error] 15158#15158: *675 FastCGI sent in stderr: "PHP message: PHP ParseError:  syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ';' in xdebug://debug-eval on line 1
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. include_once() /var/www/sklad/index.php:2
+PHP message: PHP   3. MoySklad->getAgent($name = 'Прод') /var/www/sklad/script.php:204" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 20:38:50 [error] 15158#15158: *675 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/18 21:01:52 [error] 26222#26222: *1 open() "/var/www/sklad/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", host: "sklad.ru", referrer: "http://sklad.ru/script.php"
+2019/02/18 21:02:06 [error] 26222#26222: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property 'rows' of non-object in /var/www/sklad/script.php on line 149
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. MoySklad->getAgent($name = 'По12') /var/www/sklad/index.php:138
+PHP message: PHP Warning:  Invalid argument supplied for foreach() in /var/www/sklad/script.php on line 149
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
+PHP message: PHP   2. MoySklad->getAgent($name = 'По12') /var/www/sklad/index.php:138" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
