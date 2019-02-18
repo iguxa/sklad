@@ -153,16 +153,19 @@ class MoySklad
         //$this->storeAgent($name);
         return $agents;
     }
-    private function storeAgent($name)
+    public function storeAgent($name)
     {
-        $params =array (
-            'name' => $name,
-        );
+        $counterpartys = $this->getCounterparty($name);
+        if($counterpartys->rows){
+            foreach ($counterpartys->rows as $counterparty) {
+                if($counterparty->name == $name){
+                    return $counterparty;
+                };
+            }
+        }
+
+        $params =['name' => $name,];
         return $this->curl($params,'entity/counterparty/','POST');
     }
 
 }
-
-$agent = new MoySklad();
-
-$agent->getAgent('По12');
