@@ -180,7 +180,11 @@ var_dump($counterpartys);*/
         id: 'foo',
         name: 'bar'
     }).appendTo('.agent');
+/*check/обновление - https://anna.trade-in-shop.ru/api-transit/api-itpartners/api-connect.php
 
+наличие по всем ли кодам , кэш, - https://anna.trade-in-shop.ru/api-transit/api-itpartners/check.php?code=136020,136018,139047,43950,40371,40893,287582,1569075,1586798,1587889,160394,1587996,1587833,40594,284429,104095,157197,160402,1587908,1587837
+
+из кэша, отображает что есть https://anna.trade-in-shop.ru/api-transit/api-itpartners/display.php?codebase=all*/
 
 
 
