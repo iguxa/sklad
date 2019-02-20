@@ -1,3 +1,15 @@
+<?php
+require_once ('libs/simple_html_dom.php');
+
+$api_url = 'https://anna.trade-in-shop.ru/api-transit/api-itpartners/';
+$method = ['connect'=>'api-connect.php'];
+
+
+$img_html = file_get_html($api_url.$method['connect']);
+foreach ($img_html->find('img') as $element){
+    $element->src = $api_url.$element->src ;
+}
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,7 +31,7 @@
     </div>
     <div class="order_content ">
         <div class="first d-flex justify-content-between">
-            <div class="  p-5 flex-grow-1">
+            <div class="agent  p-5 flex-grow-1">
 
                 <div class="form-group ">
                     <input type="text" class="form-control counterparty" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Контрагент">
@@ -116,13 +128,14 @@
                 <div class="refresh">
                     <button type="button" class="btn btn-success">Обновить</button>
                 </div>
-                <div class="message">
-                    <div class="alert alert-success" role="alert">
+                <div class="message" >
+                    <?= $img_html;?>
+                    <!--<div class="alert alert-success" role="alert">
                         Прайс обновлен
                     </div>
                     <div class="alert alert-danger" role="alert">
                         Какая то ошибка
-                    </div>
+                    </div>-->
                 </div>
                 <div class="next">
                     <a class="btn btn-primary" href="#" role="button">Далее</a>
@@ -162,13 +175,17 @@ var_dump($counterpartys);*/
     });
 
 
+    $('<input>').attr({
+        type: 'text',
+        id: 'foo',
+        name: 'bar'
+    }).appendTo('.agent');
+
+
 
 
 
     function get_by_param(data,action,to_append = null,method = 'POST'){
-        //var form_data = data;
-        //var post_url = action; //get form action url
-        //var request_method = method; //get form GET/POST method
         $.ajax({
             url : action,
             type: method,
@@ -190,41 +207,9 @@ var_dump($counterpartys);*/
 
             }
 
-            // window.location.href = '#'+response;
         });
     }
 
-
-
-
-    console.log('here');
-    $('.save').on('click',function () {
-        console.log('push button');
-
-        event.preventDefault(); //prevent default action
-        var post_url = $(this).parent().attr("action"); //get form action url
-
-        var request_method = $(this).parent().attr("method"); //get form GET/POST method
-        var form_data = $(this).parent().serialize(); //Encode form elements for submission
-        console.log(post_url);
-        $(".errors").empty();
-        $.ajax({
-            url : post_url,
-            type: request_method,
-            data : form_data,
-            statusCode: {
-                422: function(xhr) {
-                    $.each(xhr.responseJSON.errors, function (index, value) {
-                        $(".errors").append('<br>'+value);
-                    });
-                }
-            }
-        }).done(function(response){ //
-            //$(".test").html(response);
-            window.location.href = '#'+response;
-        });
-        //return  window.location.href = '#articles/articles';
-    });
 
 </script>
 
