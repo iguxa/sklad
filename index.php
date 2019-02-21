@@ -1,14 +1,17 @@
 <?php
 require_once ('libs/simple_html_dom.php');
 
+$debug = 1;
 $api_url = 'https://anna.trade-in-shop.ru/api-transit/api-itpartners/';
 $method = ['connect'=>'api-connect.php'];
 
-
-$img_html = file_get_html($api_url.$method['connect']);
-foreach ($img_html->find('img') as $element){
-    $element->src = $api_url.$element->src ;
+if($debug){
+    $img_html = file_get_html($api_url.$method['connect']);
+    foreach ($img_html->find('img') as $element){
+        $element->src = $api_url.$element->src ;
+    }
 }
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -41,67 +44,13 @@ foreach ($img_html->find('img') as $element){
                     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Поставщик">
                 </div>
 
-                <div class="d-flex align-items-center justify-content-between flex-wrap">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Код</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Артикул">
-                        <!--<small id="emailHelp" class="form-text text-muted">Заполнить по коду</small>-->
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Номенклатура</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Номенклатура">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Количество</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Цена</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                </div>
 
+<div class="filter">
+    <div class="input-group mb-3"><input type="number" class="form-control filter_code" id="exampleInputEmail1" name="bar" placeholder="Артикул">
+        <button type="button" class="remove_agent btn btn-warning">Удалить</button> <button type="button" class="find_agent btn btn-warning">Найти</button> </div>
+</div>
+                <div class="adder"></div>
 
-                <div class="d-flex align-items-center justify-content-between flex-wrap">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Код</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Артикул">
-                        <!--<small id="emailHelp" class="form-text text-muted">Заполнить по коду</small>-->
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Номенклатура</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Номенклатура">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Количество</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Цена</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                </div>
-
-
-                <div class="d-flex align-items-center justify-content-between flex-wrap">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Код</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Артикул">
-                        <!--<small id="emailHelp" class="form-text text-muted">Заполнить по коду</small>-->
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Номенклатура</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Номенклатура">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Количество</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="1">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Цена</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
-                    </div>
-                </div>
                 <div class="total d-flex align-items-center flex-row-reverse  flex-wrap">
 
                     <div class="form-group">
@@ -112,8 +61,8 @@ foreach ($img_html->find('img') as $element){
                     </div>
                 </div>
 
-
             </div>
+
             <div class="cart p-5 d-flex flex-column align-items-center">
                 <div class="clear"><a class="btn btn-warning" href="#" role="button">Отчистить</a>
                 </div>
@@ -174,12 +123,43 @@ var_dump($counterpartys);*/
         get_by_param(data,'/store_counterparty.php','counterparty_append');
     });
 
+    $(document).on('click','.remove_agent',function(){
+        console.log($(this).parent().find('input').val());
+        var id = $(this).parent().find('input').val();
+        if(id){
+            $('#' + id).remove();
+        }
+    });
 
-    $('<input>').attr({
-        type: 'text',
-        id: 'foo',
-        name: 'bar'
-    }).appendTo('.agent');
+    $(document).on('click','.find_agent',function(){
+       console.log( $(this).parent().find('.filter_code').val());
+       var data =  { 'code':$(this).parent().find('.filter_code').val()};
+       if(data.code){
+            var id = $(this).parent().find('input').val();
+            var code_exist = $('.adder').find('#' + id);
+            if(isEmpty(code_exist)){
+                get_by_param(data,'/find_code.php','adder',true);
+
+                var price = $('.adder').find('.price');
+                for(var i = 0;i <=price.length;i++)
+                {
+                   console.log (price[i]);
+                   console.log (i);
+                }
+            }
+       }
+    });
+    function isEmpty( el ){
+        return !$.trim(el.html())
+    }
+    $(document).on('change','.quantity',function () {
+        var quantity = $(this).val(),
+        price = $(this).parent().parent().find('.price').attr('data-price');
+        $(this).parent().parent().find('.price').val(price*quantity);
+        console.log($(this).val());
+        console.log(price);
+    });
+
 /*check/обновление - https://anna.trade-in-shop.ru/api-transit/api-itpartners/api-connect.php
 
 наличие по всем ли кодам , кэш, - https://anna.trade-in-shop.ru/api-transit/api-itpartners/check.php?code=136020,136018,139047,43950,40371,40893,287582,1569075,1586798,1587889,160394,1587996,1587833,40594,284429,104095,157197,160402,1587908,1587837
@@ -188,8 +168,7 @@ var_dump($counterpartys);*/
 
 
 
-
-    function get_by_param(data,action,to_append = null,method = 'POST'){
+    function get_by_param(data,action,to_append = null,pre_append = null,method = 'POST'){
         $.ajax({
             url : action,
             type: method,
@@ -203,9 +182,12 @@ var_dump($counterpartys);*/
             }
         }).done(function(response){ //
             if(to_append){
-                $('.' + to_append).html(response);
+                if(pre_append){
+                    $('.' + to_append).prepend(response);
 
-
+                }else{
+                    $('.' + to_append).html(response);
+                }
             }else{
                 console.log(response);
 

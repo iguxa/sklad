@@ -15,3 +15,6 @@
      background-color: #28A745;
      color: white;
  }
+ .remove_agent,.find_agent{
+     margin:0 1%;
+ }
