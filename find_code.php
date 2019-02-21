@@ -14,17 +14,16 @@ if($code){
     if($item) {
         $details = explode('|', $item);
         ?>
-        <div class="d-flex align-items-center justify-content-between flex-wrap pad" id="<?= $details[0] ?>">
+        <div class="d-flex align-items-center justify-content-between flex-wrap custom-flex" id="<?= $details[0] ?>">
             <div class="form-group">
                 <label for="exampleInputEmail1">Код</label>
                 <input type="email" class="form-control white" id="exampleInputEmail1" aria-describedby="emailHelp" readonly
                        placeholder="Артикул" value="<?= $details[0] ?>">
                 <!--<small id="emailHelp" class="form-text text-muted">Заполнить по коду</small>-->
             </div>
-            <div class="form-group custom-flex">
+            <div class="form-group ">
                 <label for="exampleInputEmail1">Номенклатура</label>
-                <input type="email" class="form-control white custom-flex" id="exampleInputEmail1" aria-describedby="emailHelp" readonly
-                       placeholder="Номенклатура" value="<?= $details[3] ?>">
+                <div class="white"><?= $details[3] ?></div>
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Количество</label>

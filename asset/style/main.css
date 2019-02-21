@@ -24,6 +24,7 @@
 .custom-flex{
     flex:1;
 }
-.pad>div{
+.custom-flex>div{
     padding: 0 1%;
+    flex: 1;
 }
