@@ -18,3 +18,12 @@
  .remove_agent,.find_agent,.btn_total{
      margin:0 1%;
  }
+.white{
+    background-color: white !important;
+}
+.custom-flex{
+    flex:1;
+}
+.pad>div{
+    padding: 0 1%;
+}

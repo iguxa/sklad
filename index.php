@@ -37,7 +37,7 @@ if($debug){
                 </div>
                 <div class="counterparty_append"></div>
                 <div class="form-group pb-5">
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" readonly placeholder="Поставщик" value="<?=$name?>">
+                    <input type="text" class="form-control white" id="exampleInputEmail1" aria-describedby="emailHelp" readonly placeholder="Поставщик" value="<?=$name?>">
                 </div>
 
 
@@ -49,7 +49,7 @@ if($debug){
                 <div class="input-group mb-3 d-flex justify-content-end">
 
 <div class="">
-                        <input type="email" class="form-control total_price" readonly id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Итого">
+                        <input type="email" class="white form-control total_price" readonly id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Итого">
 </div><div class="btn_total">
                     <button type="button" class="btn btn-info total">Итого</button></div>
 
