@@ -46,12 +46,12 @@ if($debug){
         <button type="button" class="remove_agent btn btn-warning">Удалить</button> <button type="button" class="find_agent btn btn-warning">Найти</button> </div>
 </div>
 
-                <div class="input-group mb-3 ">
+                <div class="input-group mb-3 d-flex justify-content-end">
 
-<div class="w-50"></div>
+<div class="">
                         <input type="email" class="form-control total_price" readonly id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Итого">
-
-                    <button type="button" class="btn btn-info total">Итого</button>
+</div><div class="btn_total">
+                    <button type="button" class="btn btn-info total">Итого</button></div>
 
                 </div>
                 <div class="adder"></div>
