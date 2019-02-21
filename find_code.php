@@ -7,18 +7,9 @@
  */
 
 require_once ('libs/simple_html_dom.php');
-
-$debug = 1;
-$api_url = 'https://anna.trade-in-shop.ru/api-transit/api-itpartners/';
-//$api_url = 'https://anna.trade-in-shop.ru/api-transit/api-itpartners/display.php?codebase=all';
-$method = ['connect'=>'api-connect.php',
-    'code'=>'display.php?codebase=',
-
-];
-
+require_once ('config_app.php');
 $code  = $_POST['code'] ?? null;
 if($code){
-    //$img_html = file_get_html($api_url.$method['connect']);
     $item = trim(file_get_contents($api_url.$method['code'].$code));
     if($item) {
         $details = explode('|', $item);
@@ -48,7 +39,8 @@ if($code){
             <div class="form-group">
                 <label for="exampleInputEmail1">Цена</label>
                 <input type="email" class="form-control price" id="exampleInputEmail1" aria-describedby="emailHelp"
-                       placeholder="" value="<?= $details[1] ?>" data-price="<?= $details[1] ?>">
+                       placeholder="" value="<?= ceil($details[1]*$coefficient['percent']+$coefficient['always'] ) ?>"
+                       data-price="<?= ceil($details[1]*$coefficient['percent']+$coefficient['always'] ) ?>">
             </div>
         </div>
         <?php

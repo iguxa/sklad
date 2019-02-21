@@ -1,0 +1,9 @@
+<? 
+include 'config.php';
+
+// форма
+?>
+
+
+
+

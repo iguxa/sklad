@@ -1,10 +1,6 @@
 <?php
 require_once ('libs/simple_html_dom.php');
-
-$debug = 1;
-$api_url = 'https://anna.trade-in-shop.ru/api-transit/api-itpartners/';
-$method = ['connect'=>'api-connect.php'];
-
+require_once ('config_app.php');
 if($debug){
     $img_html = file_get_html($api_url.$method['connect']);
     foreach ($img_html->find('img') as $element){
@@ -41,7 +37,7 @@ if($debug){
                 </div>
                 <div class="counterparty_append"></div>
                 <div class="form-group pb-5">
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Поставщик">
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" readonly placeholder="Поставщик" value="<?=$name?>">
                 </div>
 
 
@@ -49,21 +45,22 @@ if($debug){
     <div class="input-group mb-3"><input type="number" class="form-control filter_code" id="exampleInputEmail1" name="bar" placeholder="Артикул">
         <button type="button" class="remove_agent btn btn-warning">Удалить</button> <button type="button" class="find_agent btn btn-warning">Найти</button> </div>
 </div>
+
+                <div class="input-group mb-3 ">
+
+<div class="w-50"></div>
+                        <input type="email" class="form-control total_price" readonly id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Итого">
+
+                    <button type="button" class="btn btn-info total">Итого</button>
+
+                </div>
                 <div class="adder"></div>
 
-                <div class="total d-flex align-items-center flex-row-reverse  flex-wrap">
-
-                    <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Итого">
-                    </div>
-                    <div class="total_span pr-2">
-                        <span>Итого</span>
-                    </div>
-                </div>
 
             </div>
 
-            <div class="cart p-5 d-flex flex-column align-items-center">
+            <div class=" d-none">
+                <!--cart p-5 d-flex flex-column align-items-center-->
                 <div class="clear"><a class="btn btn-warning" href="#" role="button">Отчистить</a>
                 </div>
                 <div class="save py-2">            <a class="btn btn-success" href="#" role="button">Сохранить заказ</a>
@@ -132,7 +129,7 @@ var_dump($counterpartys);*/
     });
 
     $(document).on('click','.find_agent',function(){
-       console.log( $(this).parent().find('.filter_code').val());
+      // console.log( $(this).parent().find('.filter_code').val());
        var data =  { 'code':$(this).parent().find('.filter_code').val()};
        if(data.code){
             var id = $(this).parent().find('input').val();
@@ -140,12 +137,6 @@ var_dump($counterpartys);*/
             if(isEmpty(code_exist)){
                 get_by_param(data,'/find_code.php','adder',true);
 
-                var price = $('.adder').find('.price');
-                for(var i = 0;i <=price.length;i++)
-                {
-                   console.log (price[i]);
-                   console.log (i);
-                }
             }
        }
     });
@@ -158,6 +149,19 @@ var_dump($counterpartys);*/
         $(this).parent().parent().find('.price').val(price*quantity);
         console.log($(this).val());
         console.log(price);
+
+    });
+    $('.total').on('click',function () {
+        var price1 = $('.adder').find('.price');
+        console.log(1);
+        var total = 0;
+        for(var i = 0;i <price1.length;i++)
+        {
+             total += Number(price1[i].value);
+        }
+        $('.total_price').val(total);
+        console.log (total);
+
     });
 
 /*check/обновление - https://anna.trade-in-shop.ru/api-transit/api-itpartners/api-connect.php
@@ -195,8 +199,6 @@ var_dump($counterpartys);*/
 
         });
     }
-
-
 </script>
 
 </body>
