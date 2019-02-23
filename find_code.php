@@ -17,13 +17,14 @@ if($code){
         <div class="d-flex align-items-center justify-content-between flex-wrap custom-flex" id="<?= $details[0] ?>">
             <div class="form-group">
                 <label for="exampleInputEmail1">Код</label>
-                <input type="email" class="form-control white" id="exampleInputEmail1" aria-describedby="emailHelp" readonly
+                <input type="email" class="form-control white code" id="exampleInputEmail1" aria-describedby="emailHelp" readonly
                        placeholder="Артикул" value="<?= $details[0] ?>">
                 <!--<small id="emailHelp" class="form-text text-muted">Заполнить по коду</small>-->
             </div>
             <div class="form-group ">
                 <label for="exampleInputEmail1">Номенклатура</label>
                 <div class="white"><?= $details[3] ?></div>
+                <input type="hidden" class="description" value="<?= $details[3] ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Количество</label>
@@ -37,9 +38,11 @@ if($code){
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Цена</label>
-                <input type="email" class="form-control price white" id="exampleInputEmail1" readonly aria-describedby="emailHelp"
+                <input type="email" class="form-control price " id="exampleInputEmail1"  aria-describedby="emailHelp"
                        placeholder="" value="<?= ceil($details[1]*$coefficient['percent']+$coefficient['always'] ) ?>"
-                       data-price="<?= ceil($details[1]*$coefficient['percent']+$coefficient['always'] ) ?>">
+                       data-price="<?= ceil($details[1]*$coefficient['percent']+$coefficient['always'] ) ?>"
+                       data-price_supplier="<?= $details[1]?>"
+                >
             </div>
         </div>
         <?php

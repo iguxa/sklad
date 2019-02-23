@@ -37,7 +37,7 @@ if($debug){
                 </div>
                 <div class="counterparty_append"></div>
                 <div class="form-group pb-5">
-                    <input type="text" class="form-control white" id="exampleInputEmail1" aria-describedby="emailHelp" readonly placeholder="Поставщик" value="<?=$name?>">
+                    <input type="text" class="form-control white supplier" name="supplier" id="exampleInputEmail1" aria-describedby="emailHelp" readonly placeholder="Поставщик" value="<?=$name?>">
                 </div>
 
 
@@ -84,7 +84,7 @@ if($debug){
                     </div>-->
                 </div>
                 <div class="next">
-                    <a class="btn btn-primary" href="#" role="button">Далее</a>
+                    <a class="btn btn-primary create_order" href="#" role="button">Далее</a>
                 </div>
             </div>
         </div>
@@ -126,6 +126,47 @@ var_dump($counterpartys);*/
         if(id){
             $('#' + id).remove();
         }
+    });
+    $('.create_order').on('click',function () {
+        $('.total').trigger('click');
+        var products_param = $('.adder').find('.code').parent().parent(),product = [],reason;
+        var counterparty = $('.counterparty_append').find('select').val();
+        var supplier = $('.supplier').val();
+        var total_price = $('.total_price').val();
+        for(var i = 0;i <products_param.length;i++)
+        {
+           var product_code = {
+               'code':$(products_param[i]).find('.code').val(),
+               'description':$(products_param[i]).find('.description').val(),
+               'quantity':$(products_param[i]).find('.quantity').val(),
+               'price':$(products_param[i]).find('.price').val(),
+               'price_supplier':$(products_param[i]).find('.price').attr('data-price_supplier'),
+           };
+            product.push(product_code);
+        }
+        var order = {
+            'counterparty':counterparty,
+            'supplier':supplier,
+            'total_price':total_price,
+            'product':product,
+        };
+        if(!order.counterparty || !order.supplier || $.isEmptyObject(product)){
+            if(!order.counterparty){
+                reason = 'контрагент';
+            }
+            else if(!order.supplier){
+                reason = 'поставщик';
+            }
+            else if($.isEmptyObject(product)){
+                reason = 'продукт';
+            }
+            alert('Не заполнено : '+reason);
+            return false;
+        }
+        var data = {'order':order}
+        get_by_param(data,'/create_order.php');
+        return false;
+
     });
 
     $(document).on('click','.find_agent',function(){

@@ -893,3 +893,134 @@ PHP message: PHP Warning:  Invalid argument supplied for foreach() in /var/www/s
 PHP message: PHP Stack trace:
 PHP message: PHP   1. {main}() /var/www/sklad/index.php:0
 PHP message: PHP   2. MoySklad->getAgent($name = 'По12') /var/www/sklad/index.php:138" while reading upstream, client: 127.0.0.1, server: sklad.ru, request: "GET / HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
+2019/02/23 13:56:50 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:56:50 [error] 24683#24683: *1 open() "/var/www/sklad/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", host: "sklad.ru", referrer: "http://sklad.ru/create_order.hp"
+2019/02/23 13:57:06 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:57:09 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:57:09 [error] 24683#24683: *1 open() "/var/www/sklad/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", host: "sklad.ru", referrer: "http://sklad.ru/create_order.hp"
+2019/02/23 13:57:31 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:57:34 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:57:44 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:57:45 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:57:45 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:57:45 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:57:46 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 13:58:13 [error] 24683#24683: *1 open() "/var/www/sklad/create_order.hp" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.hp HTTP/1.1", host: "sklad.ru"
+2019/02/23 14:00:20 [error] 24683#24683: *12 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined property: stdClass::$code in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Undefined property: stdClass::$code in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Trying to get property 'code' of non-object in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
+2019/02/23 14:00:49 [error] 24683#24683: *12 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined property: stdClass::$rows in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Trying to get property 'code' of non-object in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Undefined property: stdClass::$rows in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Trying to get property 'code' of non-object in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Trying to get property 'rows' of non-object in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Trying to get property 'code' of non-object in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
+2019/02/23 14:00:53 [error] 24683#24683: *12 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined property: stdClass::$rows in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Trying to get property 'code' of non-object in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Undefined property: stdClass::$rows in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Trying to get property 'code' of non-object in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Trying to get property 'rows' of non-object in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19
+PHP message: PHP Notice:  Trying to get property 'code' of non-object in /var/www/sklad/script.php on line 175
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:19" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
+2019/02/23 14:13:54 [error] 24683#24683: *20 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught TypeError: Return value of MoySklad::curl() must be an object or null, array returned in /var/www/sklad/script.php:73
+Stack trace:
+#0 /var/www/sklad/script.php(187): MoySklad->curl(Array, 'entity/product', 'POST')
+#1 /var/www/sklad/create_order.php(24): MoySklad->FindOrCreateProduct(Array)
+#2 {main}
+  thrown in /var/www/sklad/script.php on line 73" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
+2019/02/23 14:40:58 [error] 24683#24683: *33 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/sklad/script.php:197
+Stack trace:
+#0 /var/www/sklad/create_order.php(24): MoySklad->FindOrCreateProduct(Array)
+#1 {main}
+  thrown in /var/www/sklad/script.php on line 197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
+2019/02/23 14:41:48 [error] 24683#24683: *33 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/sklad/script.php:197
+Stack trace:
+#0 /var/www/sklad/create_order.php(24): MoySklad->FindOrCreateProduct(Array)
+#1 {main}
+  thrown in /var/www/sklad/script.php on line 197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
+2019/02/23 14:41:59 [error] 24683#24683: *33 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/sklad/script.php:197
+Stack trace:
+#0 /var/www/sklad/create_order.php(24): MoySklad->FindOrCreateProduct(Array)
+#1 {main}
+  thrown in /var/www/sklad/script.php on line 197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
+2019/02/23 14:42:00 [error] 24683#24683: *33 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/sklad/script.php:197
+Stack trace:
+#0 /var/www/sklad/create_order.php(24): MoySklad->FindOrCreateProduct(Array)
+#1 {main}
+  thrown in /var/www/sklad/script.php on line 197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru"
+2019/02/23 14:44:29 [error] 24683#24683: *33 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/sklad/script.php:197
+Stack trace:
+#0 /var/www/sklad/create_order.php(24): MoySklad->FindOrCreateProduct(Array)
+#1 {main}
+  thrown in /var/www/sklad/script.php on line 197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "GET /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/create_order.php"
+2019/02/23 16:23:10 [error] 24683#24683: *279 open() "/var/www/sklad/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 17:21:17 [error] 24683#24683: *328 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 17:56:43 [error] 24683#24683: *398 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 18:00:56 [error] 24683#24683: *400 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 18:03:38 [error] 24683#24683: *403 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 18:34:30 [error] 24683#24683: *432 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 18:37:00 [error] 24683#24683: *432 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 18:41:10 [error] 24683#24683: *432 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 18:43:40 [error] 24683#24683: *443 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 18:46:53 [error] 24683#24683: *448 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 23:52:47 [error] 24683#24683: *508 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined property: stdClass::$order in /var/www/sklad/script_partners.php on line 146
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. Parnters->getAuth() /var/www/sklad/create_order.php:50" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 23:53:06 [error] 24683#24683: *508 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/sklad/script_partners.php:146
+Stack trace:
+#0 /var/www/sklad/create_order.php(50): Parnters->getAuth()
+#1 {main}
+  thrown in /var/www/sklad/script_partners.php on line 146" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 23:53:24 [error] 24683#24683: *508 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Cannot use object of type stdClass as array in /var/www/sklad/script_partners.php:146
+Stack trace:
+#0 /var/www/sklad/create_order.php(50): Parnters->getAuth()
+#1 {main}
+  thrown in /var/www/sklad/script_partners.php on line 146" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/23 23:54:39 [error] 24683#24683: *508 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/24 00:04:48 [error] 24683#24683: *514 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected ')' in /var/www/sklad/script_partners.php on line 145" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/24 00:05:01 [error] 24683#24683: *514 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected ')' in /var/www/sklad/script_partners.php on line 145" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"

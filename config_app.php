@@ -16,3 +16,4 @@ $coefficient = [
     'always' => 100,
     'percent' => 1.2
 ];
+$moy_sklad_config = ['organization_id'=>'054f6932-338c-11e9-9107-50480011ba9e'];

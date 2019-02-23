@@ -16,6 +16,7 @@ class MoySklad
     private $url_agent;
     private $local_id;
     private $organization_id;
+    private $store_id;
     private $agent_id;
     private $product_id;
     private $description;
@@ -31,6 +32,9 @@ class MoySklad
 
         $this->user = $config['user'];
         $this->password = $config['password'];
+        $this->organization_id = $config['organization_id'];
+        $this->store_id = $config['store_id'];
+
         /*$this->local_id = $params['local_id'];
         $this->organization_id = $params['organization_id'];
         $this->agent_id = $params['agent_id'];
@@ -48,10 +52,12 @@ class MoySklad
         $this->Withdrawal_Order();*/
 
     }
-    public function curl(array $params,string $provider,$method = 'POST') :?object
+    public function curl(array $params,string $provider,$method = 'POST')
     {
         $result = null;
-        try{$jsonOrderPositions= json_encode($params);
+        try{
+
+            $jsonOrderPositions= json_encode($params);
         $ch = curl_init ( $this->url_agent.$provider);
         curl_setopt($ch, CURLOPT_USERPWD, "$this->user:$this->password");
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
@@ -166,6 +172,67 @@ class MoySklad
 
         $params =['name' => $name,];
         return $this->curl($params,'entity/counterparty/','POST');
+    }
+    public function FindOrCreateProduct($products)
+    {
+        $products_exists = [];
+        $products_code = [];
+        $new_products = [];
+        $products_data = [];
+
+        $products_sklad = $this->curl([],'entity/product','GET');
+
+        foreach ($products_sklad->rows as $product_sklad){
+            $products_exists[] = $product_sklad->code;
+        }
+        foreach ($products as $product){
+            if(!in_array($product['code'],$products_exists)){
+                $products_code[] = $product['code'];
+                $new_products[] = $product;
+            }
+        }
+        if($new_products){
+            $this->curl($new_products,'entity/product','POST');
+            $products_updated = $this->curl([],'entity/product','GET');
+        }else{
+            $products_updated = $products_sklad;
+        }
+        foreach ($products as $product){
+            foreach ($products_updated->rows as $item){
+               if($item->code == $product['code']){
+                   $products_data[$item->code] = $item->id;;
+               }
+            }
+        }
+        return $products_data;
+    }
+    public function storeEnter($data)
+    {
+        $opr = array (
+            'name' => (string) date('d-m-Y').'_'.time().'_'.rand(1,500),
+            'organization' =>
+                array (
+                    'meta' =>
+                        array (
+                            'href' => 'https://online.moysklad.ru/api/remap/1.1/entity/organization/'.$this->organization_id,
+                            'metadataHref' => 'https://online.moysklad.ru/api/remap/1.1/entity/organization/metadata',
+                            'type' => 'organization',
+                            'mediaType' => 'application/json',
+                        ),
+                ),
+            'store' =>
+                array (
+                    'meta' =>
+                        array (
+                            'href' => 'https://online.moysklad.ru/api/remap/1.1/entity/store/'.$this->store_id,
+                            'metadataHref' => 'https://online.moysklad.ru/api/remap/1.1/entity/store/metadata',
+                            'type' => 'store',
+                            'mediaType' => 'application/json',
+                        ),
+                ),
+        );
+        $opr['positions'] = $data;
+        return $this->curl($opr,'entity/enter','POST');
     }
 
 }
