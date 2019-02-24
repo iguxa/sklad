@@ -10,7 +10,10 @@ require_once ('libs/simple_html_dom.php');
 require_once ('config_app.php');
 $code  = $_POST['code'] ?? null;
 if($code){
-    $item = trim(file_get_contents($api_url.$method['code'].$code));
+    $item = null;
+    $product_check =  file_get_contents($api_url.$method['check'].$code);
+    if($product_check){
+    $item = trim(file_get_contents($api_url.$method['code'].$code));}
     if($item) {
         $details = explode('|', $item);
         ?>
@@ -23,8 +26,7 @@ if($code){
             </div>
             <div class="form-group ">
                 <label for="exampleInputEmail1">Номенклатура</label>
-                <div class="white"><?= $details[3] ?></div>
-                <input type="hidden" class="description" value="<?= $details[3] ?>">
+                <input type="text" class="form-control description" value="<?= $details[3] ?>">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Количество</label>

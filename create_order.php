@@ -12,7 +12,7 @@ include ('config_app.php');
 
 $data = $_POST['order'] ?? null;
 
-if($data){
+if($data):
     $products = null;
     $result = null;
     $order_result = null;
@@ -61,8 +61,9 @@ if($data){
             if($create_order->id){
                 $print_document = $agent->getDocument($create_order);
             }
-        };
-
-}?>
-<a class="btn btn-success" href="<?=$print_document['link'] ?>" role="button">Заказ <?=$print_document['order'] ?></a>
+};?>
+    <?= $resivecx;?>
+    <a class="btn btn-success" href="<?=$print_document['link'] ?>" role="button">Заказ <?=$print_document['order'] ?></a>
+<?php endif;
+?>
 
