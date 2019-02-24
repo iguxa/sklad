@@ -11,8 +11,7 @@ include ('script_partners.php');
 include ('config_app.php');
 
 $site = "https://cos.trade-in-shop.ru";
-$resivec = file_get_contents($site.'/api-b2b/revise.php?count=1');
-$resivecx = iconv("windows-1251", "utf-8", $resivec);
+$resivecx = iconv("windows-1251", "utf-8", file_get_contents($site.'/api-b2b/revise.php?count=1'));
 
 $data = $_POST['order'] ?? null;
 
