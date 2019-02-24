@@ -117,7 +117,7 @@ class Parnters
             if($update_goods->success){
                 $done = $update_goods;
             }
-            if($done){
+            if(!$done){
                 die('Ошибка на стороне api partners');
             }
         }
