@@ -32,7 +32,7 @@ if($data):
         foreach ($data['product'] as $product){
             if(array_key_exists($product['code'],$products_id_sklad)){
                 $management['quantity'] =  (integer) $product['quantity'];
-                $management['price'] =  $product['price_supplier']*100/$product['quantity'];
+                $management['price'] =  $product['price_supplier']*100;
                 $management['assortment']['meta'] =
                         [
                             'href' => 'https://online.moysklad.ru/api/remap/1.1/entity/product/'.$products_id_sklad[$product['code']],
@@ -41,7 +41,7 @@ if($data):
                             'mediaType' => 'application/json',
                         ];
                 $result[] = $management;
-                $management['price'] = $product['price']*100/$product['quantity'];
+                $management['price'] = $product['price']*100;
                 $order_result[] = $management;
             }
 
