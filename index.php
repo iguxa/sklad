@@ -44,7 +44,9 @@ if($debug){
 
 <div class="filter">
     <div class="input-group mb-3"><input type="number" class="form-control filter_code" id="exampleInputEmail1" name="bar" placeholder="Артикул">
-        <button type="button" class="remove_agent btn btn-warning">Удалить</button> <button type="button" class="find_agent btn btn-warning">Найти</button> </div>
+        <button type="button" class="find_agent btn btn-warning">Добавить</button>
+        <button type="button" class="remove_agent btn btn-secondary">Удалить из списка</button>
+    </div>
 </div>
                 <div class="adder"></div>
 
