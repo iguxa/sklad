@@ -73,7 +73,7 @@ if($debug){
         </div>
         <div class="second">
             <div class="connection d-flex justify-content-around pt-5 align-items-center">
-                <div class="refresh">
+                <div class="refresh d-none">
                     <button type="button" class="btn btn-success">Обновить</button>
                 </div>
                 <div class="message" >

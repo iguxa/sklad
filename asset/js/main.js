@@ -75,6 +75,7 @@ $(document).on('change','.quantity',function () {
     var quantity = $(this).val(),
         price = $(this).parent().parent().find('.price').attr('data-price');
     $(this).parent().parent().find('.price').val(price*quantity);
+    $('.total_price').val('Пересчитайте');
 });
 $('.total').on('click',function () {
     var price1 = $('.adder').find('.price');
