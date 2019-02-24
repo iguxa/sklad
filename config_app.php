@@ -18,6 +18,3 @@ $coefficient = [
     'percent' => 1.2
 ];
 $moy_sklad_config = ['organization_id'=>'054f6932-338c-11e9-9107-50480011ba9e'];
-$site = "https://cos.trade-in-shop.ru";
-$resivec = file_get_contents($site.'/api-b2b/revise.php?count=1');
-$resivecx = iconv("windows-1251", "utf-8", $resivec);

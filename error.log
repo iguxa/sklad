@@ -2249,3 +2249,5 @@ PHP message: PHP Stack trace:
 PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
 PHP message: PHP   2. MoySklad->storeEnter() /var/www/sklad/create_order.php:51
 PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:252" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/24 22:54:33 [error] 24683#24683: *1059 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/24 22:56:01 [error] 24683#24683: *1063 open() "/var/www/sklad/favicon.ico" failed (2: No such file or directory), client: 127.0.0.1, server: sklad.ru, request: "GET /favicon.ico HTTP/1.1", host: "sklad.ru", referrer: "http://sklad.ru/"
