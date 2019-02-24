@@ -67,6 +67,7 @@ $(document).on('click','.find_agent',function(){
         }
     }
     $('.total_price').val('Пересчитайте');
+    $('.filter_code').val('');
 });
 function isEmpty( el ){
     return !$.trim(el.html())
