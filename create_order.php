@@ -6,14 +6,17 @@
  * Time: 13:39
  */
 
-require_once ('script.php');
-require_once ('script_partners.php');
-require_once ('config_app.php');
+include ('script.php');
+include ('script_partners.php');
+include ('config_app.php');
 
 $data = $_POST['order'] ?? null;
+
 if($data){
     $products = null;
     $result = null;
+    $order_result = null;
+    $print_document = null;
     foreach ($data['product'] as $product){
         unset($product['quantity']);
         unset($product['price']);
@@ -21,10 +24,11 @@ if($data){
         $product['name'] =  $product['description'] ? $product['description'] : $product['code'];
         $products[] = $product;
     }
-    /*if($products){
+    if($products){
         $agent = new MoySklad();
-        $products_id_sklad = $agent->FindOrCreateProduct($products);
 
+        //Получаем товары(создаем ,если нет) в моем складе
+        $products_id_sklad = $agent->FindOrCreateProduct($products);
         foreach ($data['product'] as $product){
             if(array_key_exists($product['code'],$products_id_sklad)){
                 $management['quantity'] =  (integer) $product['quantity'];
@@ -36,21 +40,29 @@ if($data){
                             'type' => 'product',
                             'mediaType' => 'application/json',
                         ];
-               // $management['overhead'] = 0;
                 $result[] = $management;
+                $management['price'] = $product['price']*100;
+                $order_result[] = $management;
             }
 
         }
+        //Делаем Оприходование
         if($result){
-            $data = $agent->storeEnter($result);
+            $create_enter = $agent->storeEnter($result);
         }
-
-    }*/
+    }
+      //Создаем заказ у партнеров
     $partners = new Parnters;
-    $auth = $partners->makeOrder($data['product']);
-    var_dump($auth);
+    $partners_order = $partners->makeOrder($data['product']);
+    //Создаем заказ в моем скаде для покупаетля(контрагент)
 
-}
+    if($order_result){
+            $create_order = $agent->CreateOrder($data['counterparty'],$order_result);
+            if($create_order->id){
+                $print_document = $agent->getDocument($create_order);
+            }
+        };
 
+}?>
+<a class="btn btn-success" href="<?=$print_document['link'] ?>" role="button">Заказ <?=$print_document['order'] ?></a>
 
-//var_dump($data);

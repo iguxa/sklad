@@ -29,6 +29,7 @@ if($debug){
         <div class="order w-50">НОВЫЙ ЗАКАЗ</div>
     </div>
     <div class="order_content ">
+        <div class="modal"></div>
         <div class="first d-flex justify-content-between">
             <div class="agent  p-5 flex-grow-1">
 
@@ -45,18 +46,18 @@ if($debug){
     <div class="input-group mb-3"><input type="number" class="form-control filter_code" id="exampleInputEmail1" name="bar" placeholder="Артикул">
         <button type="button" class="remove_agent btn btn-warning">Удалить</button> <button type="button" class="find_agent btn btn-warning">Найти</button> </div>
 </div>
+                <div class="adder"></div>
 
                 <div class="input-group mb-3 d-flex justify-content-end">
 
 <div class="">
-                        <input type="email" class="white form-control total_price" readonly id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Итого">
+                        <input type="email" class=" form-control total_price" readonly id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Итого">
 </div><div class="btn_total">
                     <button type="button" class="btn btn-info total">Итого</button></div>
 
                 </div>
-                <div class="adder"></div>
-
-
+                <div class="d-flex justify-content-center download_link">
+                </div>
             </div>
 
             <div class=" d-none">
@@ -163,8 +164,8 @@ var_dump($counterpartys);*/
             alert('Не заполнено : '+reason);
             return false;
         }
-        var data = {'order':order}
-        get_by_param(data,'/create_order.php');
+        var data = {'order':order};
+        get_by_param(data,'/create_order.php','download_link');
         return false;
 
     });
@@ -224,8 +225,12 @@ var_dump($counterpartys);*/
                         $(".errors").append('<br>'+value);
                     });
                 }
-            }
+            },
+            beforeSend: function() {
+                $('.modal').show();
+            },
         }).done(function(response){ //
+            $('.modal').hide();
             if(to_append){
                 if(pre_append){
                     $('.' + to_append).prepend(response);

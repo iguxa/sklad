@@ -24,16 +24,19 @@ class MoySklad
     private $sum;
     private $project_id;
     private $order_id;
+    private $document_link;
+    private $customer_template;
 
     public function __construct(array $params = null)
     {
-        $config = require_once ('config.php');
+        $config = include ('config.php');
         $this->url_agent = $config['url_agent'];
 
         $this->user = $config['user'];
         $this->password = $config['password'];
         $this->organization_id = $config['organization_id'];
         $this->store_id = $config['store_id'];
+        $this->customer_template = $config['customer_template'];
 
         /*$this->local_id = $params['local_id'];
         $this->organization_id = $params['organization_id'];
@@ -52,13 +55,15 @@ class MoySklad
         $this->Withdrawal_Order();*/
 
     }
-    public function curl(array $params,string $provider,$method = 'POST')
+    public function curl(array $params,string $provider,$method = 'POST',$location = null)
     {
         $result = null;
         try{
-
-            $jsonOrderPositions= json_encode($params);
+        $jsonOrderPositions= json_encode($params);
         $ch = curl_init ( $this->url_agent.$provider);
+
+        curl_setopt($ch, CURLOPT_HEADER, $location ?? 0);
+
         curl_setopt($ch, CURLOPT_USERPWD, "$this->user:$this->password");
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonOrderPositions);
@@ -68,9 +73,21 @@ class MoySklad
             )
         );
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $result = json_decode(curl_exec($ch));
+        $response = curl_exec($ch);
+        $header_size = curl_getinfo($ch, CURLINFO_HEADER_SIZE);
+        $headers = substr($response, 0, $header_size);
+        preg_match("!\r\n(?:Location|URI): *(.*?) *\r\n!", $headers, $matches);
+        $this->document_link = $matches[1];
+        $result = json_decode($response);
         if(isset($result->errors)){
             throw new Exception(curl_exec($ch));
+        }
+        if(isset($result) and is_array($result)){
+            foreach ($result as $check){
+                if(isset($check->errors)){
+                    throw new Exception($check->errors);
+                }
+            }
         }
         }catch (Exception $e) {
             echo '',  $e->getMessage(), "\n";
@@ -233,6 +250,51 @@ class MoySklad
         );
         $opr['positions'] = $data;
         return $this->curl($opr,'entity/enter','POST');
+    }
+    public function CreateOrder($agent_id,$order_result)
+    {
+        $order = array (
+            'name' => (string) date('d-m-Y').'_'.time().'_'.rand(1,500),
+            'organization' =>
+                array (
+                    'meta' =>
+                        array (
+                            'href' => 'https://online.moysklad.ru/api/remap/1.1/entity/organization/'.$this->organization_id,
+                            'type' => 'organization',
+                            'mediaType' => 'application/json',
+                        ),
+                ),
+            'agent' =>
+                array (
+                    'meta' =>
+                        array (
+                            'href' => 'https://online.moysklad.ru/api/remap/1.1/entity/counterparty/'.$agent_id,
+                            'type' => 'counterparty',
+                            'mediaType' => 'application/json',
+                        ),
+                ),
+        );
+        $order['positions'] = $order_result;
+        $create_order = $this->curl($order,'entity/customerorder');
+        return $create_order;
+    }
+    public function getDocument($order)
+    {
+        $document = array (
+            'template' =>
+                array (
+                    'meta' =>
+                        array (
+                            'href' => 'https://online.moysklad.ru/api/remap/1.1/entity/customerorder/metadata/embeddedtemplate/'.$this->customer_template,
+                            'type' => 'embeddedtemplate',
+                            'mediaType' => 'application/json',
+                        ),
+                ),
+            'extension' => 'xls',
+        );
+        $this->curl($document,'entity/customerorder/'.$order->id.'/export/','POST',1);
+        $link = ['order'=>$order->name,'link'=>$this->document_link];
+        return $link;
     }
 
 }

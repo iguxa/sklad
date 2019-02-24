@@ -28,7 +28,7 @@ class Parnters
 
     public function __construct(array $params = null)
     {
-        $config = require_once ('config.php');
+        $config = include ('config.php');
         $this->url_agent = $config['url_partners'];
 
         $this->user = $config['user_partner'];
@@ -92,7 +92,7 @@ class Parnters
         );
         $auth = $this->curl($dataAuth,'api','POST');
         if(!($auth) && !($auth->success) && !($auth->success == 1)){
-            die('Ошибка авторизации');
+            die('Ошибка авторизации у Партернс');
          }
         $this->partner_session = $auth->data->session_id;
     }
@@ -101,6 +101,7 @@ class Parnters
         $goods = null;
         $update_goods = null;
         $order_id = null;
+        $done = null;
         $order = $this->CreateOrder();
         if($order->success){
             $order_id = $order->data->orders[0]->id;
@@ -113,8 +114,14 @@ class Parnters
                 $goods[] = $item;
             }
             $update_goods = $this->addGoods($goods);
+            if($update_goods->success){
+                $done = $update_goods;
+            }
+            if($done){
+                die('Ошибка на стороне api partners');
+            }
         }
-        return $update_goods;
+        return $done;
     }
     protected function CreateOrder()
     {
