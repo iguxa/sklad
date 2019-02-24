@@ -7,8 +7,8 @@
  */
 
 return [
-    'user'=>'admin@chesteralex9',
-    'password'=>'880ff9d835',
+    'user'=>'admin@anna-sata1',
+    'password'=>'dd20d0a10f',
     'url_agent' => 'https://online.moysklad.ru/api/remap/1.1/',
     'organization_id'=>'054f6932-338c-11e9-9107-50480011ba9e',
     'store_id'=>'0550b3d7-338c-11e9-9107-50480011baa2',

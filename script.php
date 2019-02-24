@@ -196,24 +196,29 @@ class MoySklad
         $products_code = [];
         $new_products = [];
         $products_data = [];
+        $product_code = '';
 
-        $products_sklad = $this->curl([],'entity/product','GET');
+        /*$products_sklad = $this->curl([],'entity/product','GET');
 
         foreach ($products_sklad->rows as $product_sklad){
             $products_exists[] = $product_sklad->code;
-        }
-        foreach ($products as $product){
+        }*/
+        /*foreach ($products as $product){
             if(!in_array($product['code'],$products_exists)){
                 $products_code[] = $product['code'];
                 $new_products[] = $product;
             }
+        }*/
+        foreach ($products as $product){
+            $product_code .= $product['code'];
         }
-        if($new_products){
+        /*if($new_products){
             $this->curl($new_products,'entity/product','POST');
             $products_updated = $this->curl([],'entity/product','GET');
         }else{
             $products_updated = $products_sklad;
-        }
+        }*/
+        $products_updated = $this->curl([],'entity/product?search='.$product_code,'GET');
         foreach ($products as $product){
             foreach ($products_updated->rows as $item){
                if($item->code == $product['code']){
