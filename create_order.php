@@ -41,7 +41,7 @@ if($data):
                             'mediaType' => 'application/json',
                         ];
                 $result[] = $management;
-                $management['price'] = $product['price']*100;
+                $management['price'] = $product['price']*100/$product['quantity'];
                 $order_result[] = $management;
             }
 
