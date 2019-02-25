@@ -20,6 +20,7 @@ if($data):
     $result = null;
     $order_result = null;
     $print_document = null;
+    $profit = 0;
     foreach ($data['product'] as $product){
         unset($product['quantity']);
         unset($product['price']);
@@ -34,6 +35,8 @@ if($data):
         $products_id_sklad = $agent->FindOrCreateProduct($products);
         foreach ($data['product'] as $product){
             if(array_key_exists($product['code'],$products_id_sklad)){
+                $profit +=($product['price']/$product['quantity'] - $product['price_supplier'])*$product['quantity'];
+
                 $management['quantity'] =  (integer) $product['quantity'];
                 $management['price'] =  $product['price_supplier']*100;
                 $management['assortment']['meta'] =
@@ -66,6 +69,7 @@ if($data):
             }
 };?>
     <?= $resivecx;?>
+    <div style="display: none"><?= 'прибыль :'. $profit;?></div>
     <a class="btn btn-success" href="<?=$print_document['link'] ?>" role="button">Заказ <?=$print_document['order'] ?></a>
 <?php endif;
 ?>
