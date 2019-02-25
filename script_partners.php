@@ -110,7 +110,7 @@ class Parnters
                 $item['qty'] = $product['quantity'];
                 $item['sku'] = $product['code'];
                 $item['wish_price'] = 0;
-                $item['wish_price_comment'] = 'тестирование';
+                $item['wish_price_comment'] = 'api';
                 $goods[] = $item;
             }
             $update_goods = $this->addGoods($goods);
@@ -137,7 +137,7 @@ class Parnters
                 array (
                     0 =>
                         array (
-                            'partner_comment' => ' Тесттирование ',
+                            'partner_comment' => ' api ',
                         ),
                 ),
         );
