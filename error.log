@@ -2364,3 +2364,164 @@ PHP message: PHP Stack trace:
 PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
 PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
 PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:221" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:19:00 [error] 24683#24683: *1105 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:213" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:20:15 [error] 24683#24683: *1105 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:213
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:213" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:38:13 [error] 24683#24683: *1111 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->storeEnter($data = *uninitialized*) /var/www/sklad/create_order.php:54
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:232
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->CreateOrder($agent_id = *uninitialized*, $order_result = *uninitialized*) /var/www/sklad/create_order.php:63
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:258" while reading response header from upstream, client: 127.0
+2019/02/25 23:39:28 [error] 24683#24683: *1111 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:40:30 [error] 24683#24683: *1111 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:51:20 [error] 24683#24683: *1116 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:51:44 [error] 24683#24683: *1116 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:52:11 [error] 24683#24683: *1116 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:56:35 [error] 24683#24683: *1121 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:58:46 [error] 24683#24683: *1123 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/25 23:59:51 [error] 24683#24683: *1123 upstream timed out (110: Connection timed out) while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/26 00:03:42 [error] 24683#24683: *1126 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/26 00:05:55 [error] 24683#24683: *1128 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:199
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct($products = *uninitialized*) /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl($params = *uninitialized*, $provider = *uninitialized*, $method = *uninitialized*, $location = *uninitialized*) /var/www/sklad/script.php:197" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/26 00:06:04 [error] 24683#24683: *1128 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:197
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:197
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->storeEnter() /var/www/sklad/create_order.php:54
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:275
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->CreateOrder() /var/www/sklad/create_order.php:63
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:301" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /create_order.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/26 00:08:14 [error] 24683#24683: *1132 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/get_counterparty.php:0
+PHP message: PHP   2. MoySklad->getCounterparty() /var/www/sklad/get_counterparty.php:12
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:171" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /get_counterparty.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/26 00:08:19 [error] 24683#24683: *1132 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/get_counterparty.php:0
+PHP message: PHP   2. MoySklad->getCounterparty() /var/www/sklad/get_counterparty.php:12
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:171" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /get_counterparty.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/26 00:08:20 [error] 24683#24683: *1132 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/get_counterparty.php:0
+PHP message: PHP   2. MoySklad->getCounterparty() /var/www/sklad/get_counterparty.php:12
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:171" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /get_counterparty.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/26 00:08:20 [error] 24683#24683: *1132 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/get_counterparty.php:0
+PHP message: PHP   2. MoySklad->getCounterparty() /var/www/sklad/get_counterparty.php:12
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:171" while reading response header from upstream, client: 127.0.0.1, server: sklad.ru, request: "POST /get_counterparty.php HTTP/1.1", upstream: "fastcgi://unix:/var/run/php/php7.2-fpm.sock:", host: "sklad.ru", referrer: "http://sklad.ru/"
+2019/02/26 00:08:44 [error] 24683#24683: *1132 FastCGI sent in stderr: "PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:197
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:199
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:197
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->FindOrCreateProduct() /var/www/sklad/create_order.php:34
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:199
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->storeEnter() /var/www/sklad/create_order.php:54
+PHP message: PHP   3. MoySklad->curl() /var/www/sklad/script.php:275
+PHP message: PHP Notice:  Undefined offset: 1 in /var/www/sklad/script.php on line 80
+PHP message: PHP Stack trace:
+PHP message: PHP   1. {main}() /var/www/sklad/create_order.php:0
+PHP message: PHP   2. MoySklad->CreateOrder() /var/www/sklad/create_order.php:63
+PHP message: PHP   3. MoySk

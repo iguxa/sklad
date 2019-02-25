@@ -195,13 +195,56 @@ class MoySklad
         $products_data = [];
         foreach ($products as $product){
             $products_updated = $this->curl([],'entity/product?search='.$product['code'],'GET');
+            if(!$products_updated->rows){
+                $products_new = $this->curl($product,'entity/product','POST');
+                if($products_new->code){
+                    $products_data[$products_new->code] = $products_new->id;;
+                }
+            }else{
+                foreach ($products_updated->rows as $item){
+                    if($item->code == $product['code']){
+                        $products_data[$item->code] = $item->id;;
+                    }
+                }
+            }
+
+        }
+        return $products_data;
+
+
+        /*$products_exists = [];
+        $products_code = [];
+        $new_products = [];
+        $products_data = [];
+
+        $products_sklad = $this->curl([],'entity/product','GET');
+
+        foreach ($products_sklad->rows as $product_sklad){
+            $products_exists[] = $product_sklad->code;
+        }
+        foreach ($products as $product){
+            if(!in_array($product['code'],$products_exists)){
+                $products_code[] = $product['code'];
+                $new_products[] = $product;
+            }
+        }
+        if($new_products){
+            $this->curl($new_products,'entity/product','POST');
+            $products_updated = $this->curl([],'entity/product','GET');
+        }else{
+            $products_updated = $products_sklad;
+        }
+        foreach ($products as $product){
             foreach ($products_updated->rows as $item){
                 if($item->code == $product['code']){
                     $products_data[$item->code] = $item->id;;
                 }
             }
         }
-        return $products_data;
+        return $products_data;*/
+
+
+
     }
     public function storeEnter($data)
     {
@@ -250,6 +293,16 @@ class MoySklad
                         array (
                             'href' => 'https://online.moysklad.ru/api/remap/1.1/entity/counterparty/'.$agent_id,
                             'type' => 'counterparty',
+                            'mediaType' => 'application/json',
+                        ),
+                ),
+            'store' =>
+                array (
+                    'meta' =>
+                        array (
+                            'href' => 'https://online.moysklad.ru/api/remap/1.1/entity/store/'.$this->store_id,
+                            'metadataHref' => 'https://online.moysklad.ru/api/remap/1.1/entity/store/metadata',
+                            'type' => 'store',
                             'mediaType' => 'application/json',
                         ),
                 ),
