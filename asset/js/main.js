@@ -78,6 +78,12 @@ $(document).on('change','.quantity',function () {
     $(this).parent().parent().find('.price').val(price*quantity);
     $('.total_price').val('Пересчитайте');
 });
+
+$(document).on('change','.adder',function () {
+
+    $('.total_price').val('Пересчитайте');
+});
+
 $('.total').on('click',function () {
     var price1 = $('.adder').find('.price');
     var total = 0;
